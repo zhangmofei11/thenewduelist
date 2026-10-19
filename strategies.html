@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategies - The New Duelist Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-purple': '#2d1b4e',
+                        'royal-purple': '#4a2c7a',
+                        'gold': '#ffd700',
+                        'gold-dark': '#ffb347',
+                    },
+                    fontFamily: {
+                        'cinzel': ['Cinzel', 'serif'],
+                        'philosopher': ['Philosopher', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 50%, #1a0f2e 100%);
+            min-height: 100vh;
+        }
+        .magical-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#2d1b4e, #2d1b4e) padding-box,
+                        linear-gradient(135deg, #ffd700, #4a2c7a, #ffd700) border-box;
+        }
+        .tier-s {
+            background: linear-gradient(135deg, gold, #fff5cc, gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .tier-a {
+            color: #c0c0c0;
+        }
+        .tier-b {
+            color: #cd7f32;
+        }
+        .tier-c {
+            color: #8b4513;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body class="font-philosopher text-white">
+    <!-- Navigation -->
+    <nav class="bg-deep-purple/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="font-cinzel text-2xl font-bold text-gold hover:text-white transition-colors">The New Duelist</a>
+                <div class="flex flex-wrap gap-4 md:gap-8">
+                    <a href="index.html" class="text-white/80 hover:text-gold transition-colors">Home</a>
+                    <a href="cards.html" class="text-white/80 hover:text-gold transition-colors">Cards</a>
+                    <a href="strategies.html" class="text-gold hover:text-white transition-colors font-semibold">Strategies</a>
+                    <a href="walkthrough.html" class="text-white/80 hover:text-gold transition-colors">Walkthrough</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-12 px-4 text-center">
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-4 text-gold">Strategy Guide</h1>
+        <p class="text-xl text-white/70 max-w-2xl mx-auto">Master the meta with our comprehensive strategy guides and tier lists</p>
+    </header>
+
+    <!-- Tier List Section -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Card Tier List</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full magical-border rounded-xl overflow-hidden">
+                    <thead class="bg-deep-purple">
+                        <tr>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Tier</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Card Name</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Type</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Element</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/10">
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4"><span class="font-cinzel font-bold text-xl tier-s">S</span></td>
+                            <td class="px-6 py-4 font-semibold">Inferno Dragon</td>
+                            <td class="px-6 py-4">Attack</td>
+                            <td class="px-6 py-4">🔥 Fire</td>
+                            <td class="px-6 py-4 text-white/70">Top-tier damage, dominates early game</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4"><span class="font-cinzel font-bold text-xl tier-s">S</span></td>
+                            <td class="px-6 py-4 font-semibold">Arcane Sovereign</td>
+                            <td class="px-6 py-4">Balanced</td>
+                            <td class="px-6 py-4">✨ Arcane</td>
+                            <td class="px-6 py-4 text-white/70">Versatile, fits any deck composition</td>
+                        </tr>
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4"><span class="font-cinzel font-bold text-xl tier-a">A</span></td>
+                            <td class="px-6 py-4 font-semibold">Tidal Guardian</td>
+                            <td class="px-6 py-4">Defense</td>
+                            <td class="px-6 py-4">💧 Water</td>
+                            <td class="px-6 py-4 text-white/70">Excellent sustain and control</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4"><span class="font-cinzel font-bold text-xl tier-a">A</span></td>
+                            <td class="px-6 py-4 font-semibold">Storm Phantom</td>
+                            <td class="px-6 py-4">Attack</td>
+                            <td class="px-6 py-4">💨 Wind</td>
+                            <td class="px-6 py-4 text-white/70">Fast tempo, hard to counter</td>
+                        </tr>
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4"><span class="font-cinzel font-bold text-xl tier-b">B</span></td>
+                            <td class="px-6 py-4 font-semibold">Stone Golem</td>
+                            <td class="px-6 py-4">Defense</td>
+                            <td class="px-6 py-4">🌍 Earth</td>
+                            <td class="px-6 py-4 text-white/70">Solid wall, slow but reliable</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4"><span class="font-cinzel font-bold text-xl tier-b">B</span></td>
+                            <td class="px-6 py-4 font-semibold">Earthshaker</td>
+                            <td class="px-6 py-4">Attack</td>
+                            <td class="px-6 py-4">🌍 Earth</td>
+                            <td class="px-6 py-4 text-white/70">Good burst, limited utility</td>
+                        </tr>
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4"><span class="font-cinzel font-bold text-xl tier-c">C</span></td>
+                            <td class="px-6 py-4 font-semibold">Flame Sprite</td>
+                            <td class="px-6 py-4">Attack</td>
+                            <td class="px-6 py-4">🔥 Fire</td>
+                            <td class="px-6 py-4 text-white/70">Budget option, outclassed by others</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4"><span class="font-cinzel font-bold text-xl tier-c">C</span></td>
+                            <td class="px-6 py-4 font-semibold">Frost Elemental</td>
+                            <td class="px-6 py-4">Spell</td>
+                            <td class="px-6 py-4">💧 Water</td>
+                            <td class="px-6 py-4 text-white/70">Situational use only</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Guides -->
+    <section class="py-16 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Strategy Guides</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Guide 1 -->
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-4">🔥</div>
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Fire Aggro Strategy</h3>
+                    <p class="text-white/70 mb-4">Overwhelm opponents with rapid attacks before they can set up defenses. Focus on low-cost, high-damage cards.</p>
+                    <div class="text-sm text-white/60">
+                        <p><strong class="text-gold">Key Cards:</strong> Inferno Dragon, Flame Sprite</p>
+                        <p><strong class="text-gold">Win Condition:</strong> Deal 8000+ damage by turn 6</p>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-4">💧</div>
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Water Control Strategy</h3>
+                    <p class="text-white/70 mb-4">Deny opponent resources while building up powerful late-game threats. Patience is key.</p>
+                    <div class="text-sm text-white/60">
+                        <p><strong class="text-gold">Key Cards:</strong> Tidal Guardian, Frost Elemental</p>
+                        <p><strong class="text-gold">Win Condition:</strong> Outlast opponent's resources</p>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-4">🌍</div>
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Earth Ramp Strategy</h3>
+                    <p class="text-white/70 mb-4">Accelerate mana growth to play powerful cards earlier than opponents expect.</p>
+                    <div class="text-sm text-white/60">
+                        <p><strong class="text-gold">Key Cards:</strong> Stone Golem, Earthshaker</p>
+                        <p><strong class="text-gold">Win Condition:</strong> Cheat out high-cost cards</p>
+                    </div>
+                </div>
+
+                <!-- Guide 4 -->
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-4">💨</div>
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Wind Tempo Strategy</h3>
+                    <p class="text-white/70 mb-4">Strike fast and evade counterattacks. Keep pressure on while maintaining board control.</p>
+                    <div class="text-sm text-white/60">
+                        <p><strong class="text-gold">Key Cards:</strong> Storm Phantom, Zephyr Blade</p>
+                        <p><strong class="text-gold">Win Condition:</strong> Chain attacks for multiplier damage</p>
+                    </div>
+                </div>
+
+                <!-- Guide 5 -->
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-4">✨</div>
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Arcane Balance Strategy</h3>
+                    <p class="text-white/70 mb-4">Adapt to any situation with flexible card choices. Play reactively and punish mistakes.</p>
+                    <div class="text-sm text-white/60">
+                        <p><strong class="text-gold">Key Cards:</strong> Arcane Sovereign, Mana Crystal</p>
+                        <p><strong class="text-gold">Win Condition:</strong> Answer every threat efficiently</p>
+                    </div>
+                </div>
+
+                <!-- Guide 6 -->
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-4">⚔️</div>
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Mirror Match Tips</h3>
+                    <p class="text-white/70 mb-4">When facing the same deck type, focus on resource management and baiting key cooldowns.</p>
+                    <div class="text-sm text-white/60">
+                        <p><strong class="text-gold">Key Tip:</strong> Don't blow your finisher too early</p>
+                        <p><strong class="text-gold">Key Tip:</strong> Track opponent's hand size</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Meta Analysis -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Current Meta Analysis</h2>
+            <div class="magical-border rounded-xl p-8 bg-deep-purple/50">
+                <h3 class="font-cinzel text-xl font-bold mb-4 text-gold">Season 12 Meta Report</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-gold-dark mb-3">Top Performing Decks</h4>
+                        <ol class="list-decimal list-inside space-y-2 text-white/80">
+                            <li>F<strong class="text-white">Fire Aggro</strong> - 52% win rate</li>
+                            <li><strong class="text-white">Water Control</strong> - 49% win rate</li>
+                            <li><strong class="text-white">Arcane Tempo</strong> - 48% win rate</li>
+                            <li><strong class="text-white">Earth Ramp</strong> - 46% win rate</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gold-dark mb-3">Buffs & Nerfs</h4>
+                        <ul class="space-y-2 text-white/80">
+                            <li>🔥 <strong class="text-white">Inferno Dragon</strong> +10% attack (buffed)</li>
+                            <li>💧 <strong class="text-white">Tidal Shield</strong> -1 mana cost (buffed)</li>
+                            <li>💨 <strong class="text-white">Wind Slash</strong> -15% damage (nerfed)</li>
+                            <li>✨ <strong class="text-white">Arcane Burst</strong> cooldown increased (nerfed)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-purple/80 border-t border-gold/20 py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="font-cinzel text-gold text-xl mb-2">The New Duelist Wiki</p>
+            <p class="text-white/60 text-sm mb-4">Fan-made wiki site. Not affiliated with the official game developers.</p>
+            <div class="flex justify-center gap-6 text-white/60 text-sm">
+                <a href="index.html" class="hover:text-gold transition-colors">Home</a>
+                <a href="cards.html" class="hover:text-gold transition-colors">Cards</a>
+                <a href="strategies.html" class="hover:text-gold transition-colors">Strategies</a>
+                <a href="walkthrough.html" class="hover:text-gold transition-colors">Walkthrough</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

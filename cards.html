@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards - The New Duelist Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-purple': '#2d1b4e',
+                        'royal-purple': '#4a2c7a',
+                        'gold': '#ffd700',
+                        'gold-dark': '#ffb347',
+                    },
+                    fontFamily: {
+                        'cinzel': ['Cinzel', 'serif'],
+                        'philosopher': ['Philosopher', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 50%, #1a0f2e 100%);
+            min-height: 100vh;
+        }
+        .card-flip {
+            perspective: 1000px;
+        }
+        .card-inner {
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        .card-flip:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            backface-visibility: hidden;
+        }
+        .card-back {
+            transform: rotateY(180deg);
+        }
+        .magical-glow {
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 40px rgba(74, 44, 122, 0.5);
+        }
+        .magical-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#2d1b4e, #2d1b4e) padding-box,
+                        linear-gradient(135deg, #ffd700, #4a2c7a, #ffd700) border-box;
+        }
+        .card-item {
+            transition: all 0.3s ease;
+        }
+        .card-item:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body class="font-philosopher text-white">
+    <!-- Navigation -->
+    <nav class="bg-deep-purple/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="font-cinzel text-2xl font-bold text-gold hover:text-white transition-colors">The New Duelist</a>
+                <div class="flex flex-wrap gap-4 md:gap-8">
+                    <a href="index.html" class="text-white/80 hover:text-gold transition-colors">Home</a>
+                    <a href="cards.html" class="text-gold hover:text-white transition-colors font-semibold">Cards</a>
+                    <a href="strategies.html" class="text-white/80 hover:text-gold transition-colors">Strategies</a>
+                    <a href="walkthrough.html" class="text-white/80 hover:text-gold transition-colors">Walkthrough</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-12 px-4 text-center">
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-4 text-gold">Card Database</h1>
+        <p class="text-xl text-white/70 max-w-2xl mx-auto">Explore our comprehensive collection of cards and deck building strategies</p>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="py-6 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap gap-4 justify-center items-center">
+                <span class="text-gold font-semibold">Filter by Element:</span>
+                <button class="px-4 py-2 rounded-lg bg-royal-purple hover:bg-gold hover:text-deep-purple transition-colors text-sm">All</button>
+                <button class="px-4 py-2 rounded-lg bg-deep-purple hover:bg-red-600 transition-colors text-sm">🔥 Fire</button>
+                <button class="px-4 py-2 rounded-lg bg-deep-purple hover:bg-blue-600 transition-colors text-sm">💧 Water</button>
+                <button class="px-4 py-2 rounded-lg bg-deep-purple hover:bg-green-600 transition-colors text-sm">🌍 Earth</button>
+                <button class="px-4 py-2 rounded-lg bg-deep-purple hover:bg-cyan-500 transition-colors text-sm">💨 Wind</button>
+                <button class="px-4 py-2 rounded-lg bg-deep-purple hover:bg-purple-500 transition-colors text-sm">✨ Arcane</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Card Grid -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-2xl font-bold mb-8 text-gold">Featured Cards</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <!-- Card 1 -->
+                <div class="card-item magical-border rounded-xl overflow-hidden bg-gradient-to-br from-deep-purple to-royal-purple">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-2xl">🔥</span>
+                            <span class="bg-gold/20 text-gold text-xs px-2 py-1 rounded">Legendary</span>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-1">Inferno Dragon</h3>
+                        <p class="text-white/60 text-xs mb-3">Attack Type</p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-red-400">ATK: 2500</span>
+                            <span class="text-blue-400">DEF: 1800</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 px-4 py-3">
+                        <p class="text-white/70 text-xs italic">"Breathes fire that melts even the strongest defenses."</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-item magical-border rounded-xl overflow-hidden bg-gradient-to-br from-deep-purple to-royal-purple">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-2xl">💧</span>
+                            <span class="bg-gold/20 text-gold text-xs px-2 py-1 rounded">Epic</span>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-1">Tidal Guardian</h3>
+                        <p class="text-white/60 text-xs mb-3">Defense Type</p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-red-400">ATK: 1200</span>
+                            <span class="text-blue-400">DEF: 3000</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 px-4 py-3">
+                        <p class="text-white/70 text-xs italic">"Commands the seas to shield allies from harm."</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-item magical-border rounded-xl overflow-hidden bg-gradient-to-br from-deep-purple to-royal-purple">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-2xl">🌍</span>
+                            <span class="bg-gold/20 text-gold text-xs px-2 py-1 rounded">Rare</span>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-1">Stone Golem</h3>
+                        <p class="text-white/60 text-xs mb-3">Defense Type</p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-red-400">ATK: 1500</span>
+                            <span class="text-blue-400">DEF: 2800</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 px-4 py-3">
+                        <p class="text-white/70 text-xs italic">"Unmovable as the mountains themselves."</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-item magical-border rounded-xl overflow-hidden bg-gradient-to-br from-deep-purple to-royal-purple">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-2xl">💨</span>
+                            <span class="bg-gold/20 text-gold text-xs px-2 py-1 rounded">Epic</span>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-1">Storm Phantom</h3>
+                        <p class="text-white/60 text-xs mb-3">Attack Type</p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-red-400">ATK: 2200</span>
+                            <span class="text-blue-400">DEF: 1400</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 px-4 py-3">
+                        <p class="text-white/70 text-xs italic">"Strikes faster than the eye can see."</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card-item magical-border rounded-xl overflow-hidden bg-gradient-to-br from-deep-purple to-royal-purple">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-2xl">✨</span>
+                            <span class="bg-gold/20 text-gold text-xs px-2 py-1 rounded">Legendary</span>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-1">Arcane Sovereign</h3>
+                        <p class="text-white/60 text-xs mb-3">Balanced Type</p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-red-400">ATK: 2000</span>
+                            <span class="text-blue-400">DEF: 2000</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 px-4 py-3">
+                        <p class="text-white/70 text-xs italic">"Master of all elements, servant of none."</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card-item magical-border rounded-xl overflow-hidden bg-gradient-to-br from-deep-purple to-royal-purple">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-2xl">🔥</span>
+                            <span class="bg-purple-500/20 text-purple-300 text-xs px-2 py-1 rounded">Rare</span>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-1">Flame Sprite</h3>
+                        <p class="text-white/60 text-xs mb-3">Attack Type</p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-red-400">ATK: 1600</span>
+                            <span class="text-blue-400">DEF: 800</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 px-4 py-3">
+                        <p class="text-white/70 text-xs italic">"Small but fierce, it burns with passion."</p>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card-item magical-border rounded-xl overflow-hidden bg-gradient-to-br from-deep-purple to-royal-purple">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-2xl">💧</span>
+                            <span class="bg-purple-500/20 text-purple-300 text-xs px-2 py-1 rounded">Common</span>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-1">Frost Elemental</h3>
+                        <p class="text-white/60 text-xs mb-3">Spell Type</p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-red-400">ATK: 1000</span>
+                            <span class="text-blue-400">DEF: 1200</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 px-4 py-3">
+                        <p class="text-white/70 text-xs italic">"Chills enemies to the bone."</p>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card-item magical-border rounded-xl overflow-hidden bg-gradient-to-br from-deep-purple to-royal-purple">
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="text-2xl">🌍</span>
+                            <span class="bg-gold/20 text-gold text-xs px-2 py-1 rounded">Epic</span>
+                        </div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-1">Earthshaker</h3>
+                        <p class="text-white/60 text-xs mb-3">Attack Type</p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-red-400">ATK: 2400</span>
+                            <span class="text-blue-400">DEF: 1600</span>
+                        </div>
+                    </div>
+                    <div class="bg-black/30 px-4 py-3">
+                        <p class="text-white/70 text-xs italic">"When it walks, the ground trembles."</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Deck Building Guide -->
+    <section class="py-16 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold text-center mb-8 text-gold">Deck Building Guide</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-4 text-gold">Deck Composition</h3>
+                    <ul class="space-y-3 text-white/80">
+                        <li class="flex items-start gap-3">
+                            <span class="text-gold">•</span>
+                            <span><strong class="text-white">20-24 Cards</strong> total in your deck</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-gold">•</span>
+                            <span><strong class="text-white">8-10 Attack Cards</strong> for direct damage</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-gold">•</span>
+                            <span><strong class="text-white">6-8 Defense Cards</strong> for protection</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-gold">•</span>
+                            <span><strong class="text-white">4-6 Spell Cards</strong> for utility and control</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-4 text-gold">Pro Tips</h3>
+                    <ul class="space-y-3 text-white/80">
+                        <li class="flex items-start gap-3">
+                            <span class="text-gold">1.</span>
+                            <span>Focus on 1-2 element types for synergy bonuses</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-gold">2.</span>
+                            <span>Balance high-cost and low-cost cards for tempo</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-gold">3.</span>
+                            <span>Include 2-3 defensive cards for sustainability</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-gold">4.</span>
+                            <span>Test your deck in practice mode before ranked</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-purple/80 border-t border-gold/20 py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="font-cinzel text-gold text-xl mb-2">The New Duelist Wiki</p>
+            <p class="text-white/60 text-sm mb-4">Fan-made wiki site. Not affiliated with the official game developers.</p>
+            <div class="flex justify-center gap-6 text-white/60 text-sm">
+                <a href="index.html" class="hover:text-gold transition-colors">Home</a>
+                <a href="cards.html" class="hover:text-gold transition-colors">Cards</a>
+                <a href="strategies.html" class="hover:text-gold transition-colors">Strategies</a>
+                <a href="walkthrough.html" class="hover:text-gold transition-colors">Walkthrough</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

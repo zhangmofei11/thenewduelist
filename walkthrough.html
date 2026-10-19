@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthrough - The New Duelist Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-purple': '#2d1b4e',
+                        'royal-purple': '#4a2c7a',
+                        'gold': '#ffd700',
+                        'gold-dark': '#ffb347',
+                    },
+                    fontFamily: {
+                        'cincel': ['Cinzel', 'serif'],
+                        'philosopher': ['Philosopher', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 50%, #1a0f2e 100%);
+            min-height: 100vh;
+        }
+        .magical-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#2d1b4e, #2d1b4e) padding-box,
+                        linear-gradient(135deg, #ffd700, #4a2c7a, #ffd700) border-box;
+        }
+        .chapter-card {
+            transition: all 0.3s ease;
+        }
+        .chapter-card:hover {
+            transform: translateX(8px);
+        }
+        .boss-glow {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body class="font-philosopher text-white">
+    <!-- Navigation -->
+    <nav class="bg-deep-purple/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="font-cinzel text-2xl font-bold text-gold hover:text-white transition-colors">The New Duelist</a>
+                <div class="flex flex-wrap gap-4 md:gap-8">
+                    <a href="index.html" class="text-white/80 hover:text-gold transition-colors">Home</a>
+                    <a href="cards.html" class="text-white/80 hover:text-gold transition-colors">Cards</a>
+                    <a href="strategies.html" class="text-white/80 hover:text-gold transition-colors">Strategies</a>
+                    <a href="walkthrough.html" class="text-gold hover:text-white transition-colors font-semibold">Walkthrough</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-12 px-4 text-center">
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-4 text-gold">Campaign Walkthrough</h1>
+        <p class="text-xl text-white/70 max-w-2xl mx-auto">Complete guide to conquering all 5 realms and defeating every boss</p>
+    </header>
+
+    <!-- Overview -->
+    <section class="py-12 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Story Overview</h2>
+            <div class="magical-border rounded-xl p-8 bg-deep-purple/50">
+                <p class="text-white/80 text-lg leading-relaxed mb-6">
+                    You are a budding duelist in the realm of Aetheria, where magical cards are the source of all power.
+                    When the corrupt Arcane Council seizes control, you must journey across five distinct realms,
+                    mastering the art of card combat, forging alliances, and ultimately challenging the Council
+                    to restore peace to the land.
+                </p>
+                <div class="grid md:grid-cols-5 gap-4 text-center">
+                    <div class="p-4">
+                        <div class="text-3xl mb-2">🔥</div>
+                        <h3 class="font-cinzel font-bold text-gold">Ember Peaks</h3>
+                        <p class="text-white/60 text-sm">Chapter 1-2</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl mb-2">🌊</div>
+                        <h3 class="font-cinzel font-bold text-gold">Azure Depths</h3>
+                        <p class="text-white/60 text-sm">Chapter 3-4</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl mb-2">🏔️</div>
+                        <h3 class="font-cinzel font-bold text-gold">Stone Giants</h3>
+                        <p class="text-white/60 text-sm">Chapter 5-6</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl mb-2">⛈️</div>
+                        <h3 class="font-cinzel font-bold text-gold">Sky Citadel</h3>
+                        <p class="text-white/60 text-sm">Chapter 7-8</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl mb-2">✨</div>
+                        <h3 class="font-cinzel font-bold text-gold">Arcane Core</h3>
+                        <p class="text-white/60 text-sm">Chapter 9-10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chapter List -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Chapter Guide</h2>
+            <div class="space-y-4">
+
+                <!-- Chapter 1 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 1</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">The Spark of Battle</h3>
+                            <span class="text-white/60">Ember Peaks</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Your journey begins in the humble village of Hearth. Learn the basics of combat against local rivals and discover your affinity for Fire magic.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 1-3</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 3</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Ember Scout Captain</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Ember Scout Captain</h4>
+                            <p class="text-white/70 text-sm">Uses basic Fire attacks. Keep your defense up and attack during his cooldowns. He has 1500 HP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 2</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">Trial by Fire</h3>
+                            <span class="text-white/60">Ember Peaks</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Venture deeper into volcanic terrain. Face tougher opponents and prove your worth at the Ember Arena tournament.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 4-6</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 5</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Pyromancer Vex</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Pyromancer Vex</h4>
+                            <p class="text-white/70 text-sm">Spells deal burn damage over time. Bring healing cards and don't let your HP drop below 50% for too long. He has 3000 HP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 3</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">Into the Depths</h3>
+                            <span class="text-white/60">Azure Depths</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Journey to the underwater kingdom of Pelagios. The environment changes combat with water-based puzzles and currents.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 7-9</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 4</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Leviathan Knight</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Leviathan Knight</h4>
+                            <p class="text-white/70 text-sm">High defense, low attack. Chip away with water spells and save your ultimate for when he's stunned. He has 4000 HP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 4</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">The Coral Throne</h3>
+                            <span class="text-white/60">Azure Depths</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Discover the truth about the sunken kingdom's alliance with the Arcane Council. Navigate political intrigue while dueling for survival.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 10-12</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 6</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Queen Tidalis</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Queen Tidalis</h4>
+                            <p class="text-white/70 text-sm">Summons water minions. Clear them quickly or they'll overwhelm you. Focus on the Queen when she appears. She has 5000 HP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 5 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-green-700 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 5</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">Ancient Awakening</h3>
+                            <span class="text-white/60">Stone Giants</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Enter the territory of the Stone Giants, ancient beings who have watched over the realm for millennia.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 13-15</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 5</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Granite Guardian</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Granite Guardian</h4>
+                            <p class="text-white/70 text-sm">Extremely high defense but slow. Use Earth-type cards for bonus damage. Patience wins this fight. He has 6000 HP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 6 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-green-700 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 6</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">The Titan's Challenge</h3>
+                            <span class="text-white/60">Stone Giants</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Face the greatest of the Stone Giants in an epic colosseum battle witnessed by hundreds of giants.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 16-18</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 4</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Elder Titan Moloch</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Elder Titan Moloch</h4>
+                            <p class="text-white/70 text-sm">Enrages at 50% HP, doubling his attack but halving his defense. Save your burst damage for this phase. He has 7000 HP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 7 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 7</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">Skies of Fury</h3>
+                            <span class="text-white/60">Sky Citadel</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Ascend to the floating Sky Citadel. Wind currents affect combat positioning and spell trajectories.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 19-21</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 5</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Storm Warden Zephyr</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Storm Warden Zephyr</h4>
+                            <p class="text-white/70 text-sm">Fast and evasive. Use Wind-type cards to match his speed, or lock him down with Earth stun effects. He has 5500 HP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 8 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 8</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">The Cloud King</h3>
+                            <span class="text-white/60">Sky Citadel</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Challenge the ruler of the Sky Citadel for the secret passage to the Arcane Core.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 22-24</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 6</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Cloud King Altius</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Cloud King Altius</h4>
+                            <p class="text-white/70 text-sm">Has two phases. In second phase, he summons wind clones. Kill clones first or they'll heal him. He has 8000 HP total.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 9 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold">Chapter 9</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">Heart of Magic</h3>
+                            <span class="text-white/60">Arcane Core</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Enter the source of all magical power. Reality bends and warps as you approach the Council's seat of power.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 25-27</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 7</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: Arcane Sentinel</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Boss Strategy - Arcane Sentinel</h4>
+                            <p class="text-white/70 text-sm">Uses random element types each turn. Adapt quickly and don't rely on elemental synergies. He has 6500 HP.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 10 -->
+                <div class="magical-border rounded-xl bg-deep-purple/50 overflow-hidden boss-glow">
+                    <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-4 mb-4">
+                            <span class="bg-gold text-deep-purple px-3 py-1 rounded-full text-sm font-bold">Chapter 10</span>
+                            <h3 class="font-cinzel text-2xl font-bold text-gold">Final Duel</h3>
+                            <span class="text-white/60">Arcane Core</span>
+                        </div>
+                        <p class="text-white/70 mb-4">Face the ultimate challenge: the corrupt Arcane Council itself. Only the worthy can restore balance to Aetheria.</p>
+                        <div class="flex flex-wrap gap-4 text-sm">
+                            <span class="text-gold">Recommended Level: 28-30</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-green-400">Battles: 3</span>
+                            <span class="text-white/60">|</span>
+                            <span class="text-yellow-400">Boss: The Arcane Council (Final)</span>
+                        </div>
+                        <div class="mt-4 p-4 bg-black/20 rounded-lg">
+                            <h4 class="font-bold text-gold-dark mb-2">Final Boss Strategy - The Arcane Council</h4>
+                            <p class="text-white/70 text-sm mb-2">Three-phase battle against Council members:</p>
+                            <ul class="text-white/70 text-sm list-disc list-inside space-y-1">
+                                <li><strong>Phase 1:</strong> Fire Councilor (4000 HP) - Aggressive</li>
+                                <li><strong>Phase 2:</strong> Water Councilor (4500 HP) - Control</li>
+                                <li><strong>Phase 3:</strong> Arcane Overlord (5000 HP) - All elements</li>
+                            </ul>
+                            <p class="text-white/70 text-sm mt-3">Bring a balanced deck with answers for each element. Save your best cards for Phase 3.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="py-12 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">General Tips</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Before Boss Battles</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li>• Fully upgrade your deck</li>
+                        <li>• Complete side quests for bonus items</li>
+                        <li>• Review boss patterns in advance</li>
+                        <li>• Save before attempting</li>
+                    </ul>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Resource Farming</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li>• Daily quests give bonus XP</li>
+                        <li>• Replay Chapter 2 for gold farming</li>
+                        <li>• Arena gives card packs</li>
+                        <li>• Trade duplicates with players</li>
+                    </ul>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Leveling Fast</h3>
+                    <ul class="space-y-2 text-white/70 text-sm">
+                        <li>• Focus main story for XP</li>
+                        <li>• Use XP boost items</li>
+                        <li>• Don't skip dialogue (bonus XP)</li>
+                        <li>• Unlock hidden areas for bonus</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-purple/80 border-t border-gold/20 py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="font-cinzel text-gold text-xl mb-2">The New Duelist Wiki</p>
+            <p class="text-white/60 text-sm mb-4">Fan-made wiki site. Not affiliated with the official game developers.</p>
+            <div class="flex justify-center gap-6 text-white/60 text-sm">
+                <a href="index.html" class="hover:text-gold transition-colors">Home</a>
+                <a href="cards.html" class="hover:text-gold transition-colors">Cards</a>
+                <a href="strategies.html" class="hover:text-gold transition-colors">Strategies</a>
+                <a href="walkthrough.html" class="hover:text-gold transition-colors">Walkthrough</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
