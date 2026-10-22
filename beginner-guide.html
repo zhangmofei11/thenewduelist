@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Guide - The New Duelist Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-purple': '#2d1b4e',
+                        'royal-purple': '#4a2c7a',
+                        'gold': '#ffd700',
+                        'gold-dark': '#ffb347',
+                    },
+                    fontFamily: {
+                        'cinzel': ['Cinzel', 'serif'],
+                        'philosopher': ['Philosopher', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 50%, #1a0f2e 100%);
+            min-height: 100vh;
+        }
+        .magical-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#2d1b4e, #2d1b4e) padding-box,
+                        linear-gradient(135deg, #ffd700, #4a2c7a, #ffd700) border-box;
+        }
+        .step-item {
+            transition: all 0.3s ease;
+        }
+        .step-item:hover {
+            transform: translateX(8px);
+        }
+        .checklist li {
+            padding-left: 1.5rem;
+            position: relative;
+            list-style: none;
+        }
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGDRFL5C7S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LGDRFL5C7S');
+    </script>
+    <meta name="description" content="A beginner progression guide for The New Duelist covering first sessions, starter decks, core mana and card rules, campaign milestones, and ranked play basics.">
+    <meta name="keywords" content="The New Duelist beginner guide, how to play The New Duelist, starter decks, new player tips, campaign progression, beginner mistakes, first deck">
+    <link rel="canonical" href="https://thenewduelist.site/beginner-guide.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        { "@type": "WebSite", "@id": "https://thenewduelist.site/#website", "name": "The New Duelist", "url": "https://thenewduelist.site/", "inLanguage": "en" },
+        { "@type": "WebPage", "@id": "https://thenewduelist.site/#webpage", "url": "https://thenewduelist.site/beginner-guide.html", "name": "Beginner Guide - The New Duelist Wiki", "description": "A beginner progression guide for The New Duelist covering first sessions, starter decks, core mana and card rules, campaign milestones, and ranked play basics.", "isPartOf": { "@id": "https://thenewduelist.site/#website" }, "breadcrumb": { "@id": "https://thenewduelist.site/#breadcrumb" }, "inLanguage": "en" },
+        { "@type": "BreadcrumbList", "@id": "https://thenewduelist.site/#breadcrumb", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thenewduelist.site/" } ] }
+      ]
+    }
+    </script>
+</head>
+<body class="font-philosopher text-white">
+    <!-- Navigation -->
+    <nav class="bg-deep-purple/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="font-cinzel text-2xl font-bold text-gold hover:text-white transition-colors">The New Duelist</a>
+                <div class="flex flex-wrap gap-4 md:gap-8">
+                    <a href="index.html" class="text-white/80 hover:text-gold transition-colors">Home</a>
+                    <a href="cards.html" class="text-white/80 hover:text-gold transition-colors">Cards</a>
+                    <a href="strategies.html" class="text-white/80 hover:text-gold transition-colors">Strategies</a>
+                    <a href="walkthrough.html" class="text-white/80 hover:text-gold transition-colors">Walkthrough</a>
+                    <a href="tips.html" class="text-white/80 hover:text-gold transition-colors">Tips</a>
+                    <a href="beginner-guide.html" class="text-gold hover:text-white transition-colors font-semibold">Beginner Guide</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-12 px-4 text-center">
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-4 text-gold">The New Duelist Beginner Guide</h1>
+        <p class="text-xl text-white/70 max-w-3xl mx-auto">From your first battle in Hearth to ranked play: what to learn, in what order, and when to move on.</p>
+    </header>
+
+    <!-- First Session -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Your First Session</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Start With One Element</h3>
+                    <p class="text-white/70 mb-4">You can pick Fire, Water, Earth or Wind starter decks. Commit to one for your first ten battles. The bonus from focused elements makes the early game far easier to read, and you will stop making the classic beginner mistake of spreading across five elements with no plan.</p>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li>• <strong class="text-white">Fire:</strong> fastest damage, weakest defence, easiest to learn first</li>
+                        <li>• <strong class="text-white">Water:</strong> slowest start, but the most forgiving once you survive</li>
+                        <li>• <strong class="text-white">Earth:</strong> tanky and steady, teaches resource planning</li>
+                        <li>• <strong class="text-white">Wind:</strong> aggressive and fast, teaches sequencing</li>
+                    </ul>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Learn the Four Systems</h3>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li>• <strong class="text-white">Mana.</strong> It grows each turn and you can only spend what you have. Unspent mana is wasted value.</li>
+                        <li>• <strong class="text-white">Card types.</strong> Attack cards deal damage, Defense cards absorb it, Spell cards change the board, Balanced cards do a bit of everything.</li>
+                        <li>• <strong class="text-white">ATK and DEF.</strong> A card with 2500 ATK and 1800 DEF (Inferno Dragon) is not balanced on both sides. Read the numbers before you commit.</li>
+                        <li>• <strong class="text-white">HP and cooldowns.</strong> Bosses and some cards have cooldowns between uses, which is what makes baiting them possible.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progression -->
+    <section class="py-12 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Campaign Progression Milestones</h2>
+            <div class="space-y-4">
+                <div class="step-item magical-border rounded-xl bg-deep-purple/50 p-6">
+                    <div class="flex flex-wrap items-center gap-4 mb-3">
+                        <span class="bg-gold text-deep-purple px-3 py-1 rounded-full text-sm font-bold">Milestone 1</span>
+                        <h3 class="font-cinzel text-xl font-bold text-gold">Finish Chapter 1: The Spark of Battle</h3>
+                    </div>
+                    <p class="text-white/70 text-sm">Three battles against local rivals in Hearth, ending with the Ember Scout Captain at 1500 HP. Do not rush this. It is the cheapest place to learn the turn structure, and the Ember Peaks reward you with the Fire affinity and your first real deck options.</p>
+                </div>
+                <div class="step-item magical-border rounded-xl bg-deep-purple/50 p-6">
+                    <div class="flex flex-wrap items-center gap-4 mb-3">
+                        <span class="bg-gold text-deep-purple px-3 py-1 rounded-full text-sm font-bold">Milestone 2</span>
+                        <h3 class="font-cinzel text-xl font-bold text-gold">Clear Chapter 2: Trial by Fire</h3>
+                    </div>
+                    <p class="text-white/70 text-sm">Five battles and the Ember Arena tournament, ending with Pyromancer Vex at 3000 HP. Vex applies burn damage over time, so this is the first boss that punishes greed. Bring healing, keep your HP above half, and unlock the Arena if you have not already.</p>
+                </div>
+                <div class="step-item magical-border rounded-xl bg-deep-purple/50 p-6">
+                    <div class="flex flex-wrap items-center gap-4 mb-3">
+                        <span class="bg-gold text-deep-purple px-3 py-1 rounded-full text-sm font-bold">Milestone 3</span>
+                        <h3 class="font-cinzel text-xl font-bold text-gold">Reach the Azure Depths</h3>
+                    </div>
+                    <p class="text-white/70 text-sm">Chapters 3 and 4 shift the rules of the fight: water puzzles and currents change card play, and the Leviathan Knight at 4000 HP forces you to chip down a high-defence target rather than race it. Queen Tidalis at 5000 HP then punishes you for leaving summons alive.</p>
+                </div>
+                <div class="step-item magical-border rounded-xl bg-deep-purple/50 p-6">
+                    <div class="flex flex-wrap items-center gap-4 mb-3">
+                        <span class="bg-gold text-deep-purple px-3 py-1 rounded-full text-sm font-bold">Milestone 4</span>
+                        <h3 class="font-cinzel text-xl font-bold text-gold">Master the Stone Giants and Sky Citadel</h3>
+                    </div>
+                    <p class="text-white/70 text-sm">The Granite Guardian (6000 HP) and Elder Titan Moloch (7000 HP) teach patience and phase timing, since Moloch doubles attack at half HP. Storm Warden Zephyr and Cloud King Altius in the Sky Citadel teach speed and summon clearing, because Altius heals from his own clones. By Chapter 8 you should be able to build a deck on purpose rather than by accident.</p>
+                </div>
+                <div class="step-item magical-border rounded-xl bg-deep-purple/50 p-6">
+                    <div class="flex flex-wrap items-center gap-4 mb-3">
+                        <span class="bg-gold text-deep-purple px-3 py-1 rounded-full text-sm font-bold">Milestone 5</span>
+                        <h3 class="font-cinzel text-xl font-bold text-gold">Arcane Core and Ranked</h3>
+                    </div>
+                    <p class="text-white/70 text-sm">The Arcane Sentinel (6500 HP) switches elements every turn, so element-locked decks finally break. Only after that should you enter ranked leagues. A balanced deck with answers for Fire, Water and Arcane is what carries you through the three-phase Arcane Council finale, and it is the same deck that wins your first ranked matches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First Deck -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Building Your First Real Deck</h2>
+            <p class="text-white/80 mb-6 max-w-3xl">Do not collect 500 cards and try to use them all. A deck of 20-24 cards is the working size, and the split matters more than the individual cards you pick.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full magical-border rounded-xl overflow-hidden">
+                    <thead class="bg-deep-purple">
+                        <tr>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Slot</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">How Many</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">What It Does</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/10">
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4 font-semibold">Attack</td>
+                            <td class="px-6 py-4">8-10</td>
+                            <td class="px-6 py-4 text-white/70">Your win condition. Inferno Dragon and Storm Phantom push damage, Earthshaker gives burst</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4 font-semibold">Defense</td>
+                            <td class="px-6 py-4">6-8</td>
+                            <td class="px-6 py-4 text-white/70">Buys you turns. Tidal Guardian sustains, Stone Golem holds a lane</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4 font-semibold">Spell</td>
+                            <td class="px-6 py-4">4-6</td>
+                            <td class="px-6 py-4 text-white/70">Utility and answers. Frost Elemental slows a threat, Arcane Burst punishes a wide board</td>
+                        </tr>
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4 font-semibold">Balanced</td>
+                            <td class="px-6 py-4">1-2</td>
+                            <td class="px-6 py-4 text-white/70">Arcane Sovereign slots into any plan and smooths awkward early turns</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Beginner Mistakes -->
+    <section class="py-12 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Beginner Mistakes to Avoid</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Decking Too Wide</h3>
+                    <p class="text-white/70 text-sm">A 30-card deck with five elements draws the wrong half of your deck every game. Cut to 20-24, pick one main element and one support element, and add the off-element answer later once you know the matchup.</p>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Skipping the Practice Mode Check</h3>
+                    <p class="text-white/70 text-sm">Run your deck in practice mode before you queue ranked. It costs you nothing and it is where you discover that you have no answer to a Storm Phantom board, or that your only cheap card is a dead draw late.</p>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Ignoring the Farming Loop</h3>
+                    <p class="text-white/70 text-sm">Daily quests, replaying Chapter 2 for gold, Arena card packs and trading duplicate cards are how a beginner actually acquires a competitive pool. Push content, not just wins, in your first weeks.</p>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Playing Every Card Every Turn</h3>
+                    <p class="text-white/70 text-sm">Emptying your hand is how beginners lose. Keep one card in reserve so you can respond to the board in front of you rather than only to the plan you made on turn 1.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Your First Week Checklist</h2>
+            <div class="magical-border rounded-xl p-8 bg-deep-purple/50 grid md:grid-cols-2 gap-6">
+                <ul class="checklist space-y-2 text-white/80 text-sm">
+                    <li>Pick one starter element and stay in it for ten battles</li>
+                    <li>Learn the turn structure and mana curve in the first three chapters</li>
+                    <li>Beat Pyromancer Vex with healing in your deck</li>
+                    <li>Open the Arena and run one practice match</li>
+                    <li>Claim every daily quest reward</li>
+                </ul>
+                <ul class="checklist space-y-2 text-white/80 text-sm">
+                    <li>Trim your deck to 20-24 cards with 6-8 defensive cards</li>
+                    <li>Add one off-element answer</li>
+                    <li>Clear the Stone Giants without losing more than three attempts</li>
+                    <li>Trade your duplicate cards</li>
+                    <li>Enter one ranked match with a deck you have tested twice</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adsterra Ads -->
+    <script async="async" data-cfasync="false" src="https://bauval.org/21/68fe8de0f9e903ae99f5758760ec42ac"></script>
+    <div id="container-68fe8de0f9e903ae99f5758760ec42ac"></div>
+
+    <script data-cfasync="false" src="https://bauval.org/14/b7bf862a458c7d9251b8087d2bafabf1"></script>
+
+    <script>
+      atOptions = {
+        'key' : '1b4c42a9e5ee18745ffeea1b12389dfe',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://bauval.org/22/1b4c42a9e5ee18745ffeea1b12389dfe"></script>
+
+    <!-- Footer -->
+    <footer class="bg-deep-purple/80 border-t border-gold/20 py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="font-cinzel text-gold text-xl mb-2">The New Duelist Wiki</p>
+            <p class="text-white/60 text-sm mb-4">Fan-made wiki site. Not affiliated with the official game developers.</p>
+            <div class="flex justify-center gap-6 text-white/60 text-sm">
+                <a href="index.html" class="hover:text-gold transition-colors">Home</a>
+                <a href="cards.html" class="hover:text-gold transition-colors">Cards</a>
+                <a href="strategies.html" class="hover:text-gold transition-colors">Strategies</a>
+                <a href="walkthrough.html" class="hover:text-gold transition-colors">Walkthrough</a>
+                <a href="tips.html" class="hover:text-gold transition-colors">Tips</a>
+                <a href="beginner-guide.html" class="hover:text-gold transition-colors">Beginner Guide</a>
+            </div>
+        </div>
+
+    <!-- Related Articles -->
+    <section class="max-w-4xl mx-auto py-8 px-4 border-t border-amber-900">
+        <h3 class="text-xl font-bold mb-4 text-white">You Might Also Like</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+        <a href="index.html" class="block p-4 bg-amber-900/30 border-amber-900 rounded hover:bg-amber-800/30 transition">
+            <span class="font-semibold text-gray-300">→ The New Duelist - Fan Wiki</span>
+        </a>
+        <a href="walkthrough.html" class="block p-4 bg-amber-900/30 border-amber-900 rounded hover:bg-amber-800/30 transition">
+            <span class="font-semibold text-gray-300">→ Walkthrough - The New Duelist Wiki</span>
+        </a>
+        <a href="tips.html" class="block p-4 bg-amber-900/30 border-amber-900 rounded hover:bg-amber-800/30 transition">
+            <span class="font-semibold text-gray-300">→ Tips and Tricks - The New Duelist Wiki</span>
+        </a>
+        </div>
+    </section>
+</footer>
+</body>
+</html>

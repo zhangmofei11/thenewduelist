@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips and Tricks - The New Duelist Wiki</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-purple': '#2d1b4e',
+                        'royal-purple': '#4a2c7a',
+                        'gold': '#ffd700',
+                        'gold-dark': '#ffb347',
+                    },
+                    fontFamily: {
+                        'cinzel': ['Cinzel', 'serif'],
+                        'philosopher': ['Philosopher', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 50%, #1a0f2e 100%);
+            min-height: 100vh;
+        }
+        .magical-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#2d1b4e, #2d1b4e) padding-box,
+                        linear-gradient(135deg, #ffd700, #4a2c7a, #ffd700) border-box;
+        }
+        .tip-item {
+            transition: all 0.3s ease;
+        }
+        .tip-item:hover {
+            transform: translateY(-6px);
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGDRFL5C7S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LGDRFL5C7S');
+    </script>
+    <meta name="description" content="Practical tips and tricks for The New Duelist, covering opening hands, resource chaining, matchup openers, opponent tells, mistake analysis, and drills.">
+    <meta name="keywords" content="The New Duelist tips, tricks, opening hand, resource chaining, matchup guide, read opponent, drills, mistake analysis">
+    <link rel="canonical" href="https://thenewduelist.site/tips.html">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        { "@type": "WebSite", "@id": "https://thenewduelist.site/#website", "name": "The New Duelist", "url": "https://thenewduelist.site/", "inLanguage": "en" },
+        { "@type": "WebPage", "@id": "https://thenewduelist.site/#webpage", "url": "https://thenewduelist.site/tips.html", "name": "Tips and Tricks - The New Duelist Wiki", "description": "Practical tips and tricks for The New Duelist, covering opening hands, resource chaining, matchup openers, opponent tells, mistake analysis, and drills.", "isPartOf": { "@id": "https://thenewduelist.site/#website" }, "breadcrumb": { "@id": "https://thenewduelist.site/#breadcrumb" }, "inLanguage": "en" },
+        { "@type": "BreadcrumbList", "@id": "https://thenewduelist.site/#breadcrumb", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thenewduelist.site/" } ] }
+      ]
+    }
+    </script>
+</head>
+<body class="font-philosopher text-white">
+    <!-- Navigation -->
+    <nav class="bg-deep-purple/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gold/20">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <a href="index.html" class="font-cinzel text-2xl font-bold text-gold hover:text-white transition-colors">The New Duelist</a>
+                <div class="flex flex-wrap gap-4 md:gap-8">
+                    <a href="index.html" class="text-white/80 hover:text-gold transition-colors">Home</a>
+                    <a href="cards.html" class="text-white/80 hover:text-gold transition-colors">Cards</a>
+                    <a href="strategies.html" class="text-white/80 hover:text-gold transition-colors">Strategies</a>
+                    <a href="walkthrough.html" class="text-white/80 hover:text-gold transition-colors">Walkthrough</a>
+                    <a href="tips.html" class="text-gold hover:text-white transition-colors font-semibold">Tips</a>
+                    <a href="beginner-guide.html" class="text-white/80 hover:text-gold transition-colors">Beginner Guide</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-12 px-4 text-center">
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-4 text-gold">Tips and Tricks for The New Duelist</h1>
+        <p class="text-xl text-white/70 max-w-3xl mx-auto">Small decisions win duels. Use these habits to squeeze more out of every card you own.</p>
+    </header>
+
+    <!-- Opening Hand Priority -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Opening Hand Priority</h2>
+            <div class="magical-border rounded-xl p-8 bg-deep-purple/50">
+                <p class="text-white/80 mb-6">Your first hand decides the tempo of the whole match. Rank every card in it from 1 to 3 before you play turn 1.</p>
+                <ul class="space-y-3 text-white/80">
+                    <li class="flex items-start gap-3">
+                        <span class="text-gold">•</span>
+                        <span><strong class="text-white">Keep one cheap body every game.</strong> A 1-2 drop such as Flame Sprite gives you something to do on turn 1, forces the opponent to answer, and keeps you from being tempo-checked for free.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-gold">•</span>
+                        <span><strong class="text-white">Never keep two expensive cards with no blocker.</strong> Holding Inferno Dragon and Earthshaker but no defense means every early board is unwinnable.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-gold">•</span>
+                        <span><strong class="text-white">One Spell is worth two bodies early.</strong> Cards like Frost Elemental or Arcane Burst change a turn's outcome, so a utility card in the opener is usually stronger than a second attacker.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-gold">•</span>
+                        <span><strong class="text-white">Mutate your keeper for the matchup.</strong> Against a fast Wind board, hold Stone Golem over a second body. Against a slow Earth Ramp shell, hold a second body over a wall.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Chaining -->
+    <section class="py-12 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Resource Chaining Order</h2>
+            <p class="text-white/80 mb-6 max-w-3xl">Mana is the real clock in The New Duelist, and cards played out of order are how players run out of steam. Chain your resources in the order below instead of dumping your biggest card whenever it becomes playable.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full magical-border rounded-xl overflow-hidden">
+                    <thead class="bg-deep-purple">
+                        <tr>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Turn</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Priority Play</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Why It Comes First</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/10">
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4 font-semibold">Turn 1</td>
+                            <td class="px-6 py-4">Cheapest body or a mana accelerator</td>
+                            <td class="px-6 py-4 text-white/70">Establishes board presence and card advantage before the opponent sets up</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4 font-semibold">Turn 2</td>
+                            <td class="px-6 py-4">Second body, or the answer to their turn 1</td>
+                            <td class="px-6 py-4 text-white/70">Answers are worth more than bodies when the board is contested</td>
+                        </tr>
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4 font-semibold">Turn 3</td>
+                            <td class="px-6 py-4">Utility: spell, heal, or board clear</td>
+                            <td class="px-6 py-4 text-white/70">Utility swings the widest range of outcomes and is the hardest to rebuild</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4 font-semibold">Turn 4-5</td>
+                            <td class="px-6 py-4">Your first big threat</td>
+                            <td class="px-6 py-4 text-white/70">Finishing pressure before the opponent stabilises, while you still have answers left</td>
+                        </tr>
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4 font-semibold">Turn 6+</td>
+                            <td class="px-6 py-4">Finisher plus one held answer</td>
+                            <td class="px-6 py-4 text-white/70">An empty hand at turn 6 is a guaranteed loss to any late-game threat</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matchup Openers -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Matchup-Specific Openers</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Against Aggro (Fire)</h3>
+                    <p class="text-white/70 mb-4">They want to hit 8000 damage by turn 6, so you have to make that timeline expensive.</p>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li>• Open with a defense card, not a second attacker</li>
+                        <li>• Save one board clear for their biggest swing turn</li>
+                        <li>• Trade, do not race: every Flame Sprite they spend is a card they no longer have</li>
+                    </ul>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Against Control (Water)</h3>
+                    <p class="text-white/70 mb-4">They want to outlast you, which means you cannot let the game reach their preferred shape.</p>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li>• Force the game forward with early threats</li>
+                        <li>• Do not over-commit into a healthy Tidal Guardian</li>
+                        <li>• Keep one big finisher back for after their sustain is spent</li>
+                    </ul>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Against Ramp (Earth)</h3>
+                    <p class="text-white/70 mb-4">They plan to cheat out expensive cards, so pressure and disruption beat raw stats.</p>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li>• Deny their mana growth instead of matching it</li>
+                        <li>• Apply pressure in the turns before they hit their big turn</li>
+                        <li>• Beat their plan, not their board, since the board arrives late</li>
+                    </ul>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Against Wind Tempo</h3>
+                    <p class="text-white/70 mb-4">They chain attacks for multiplier damage and rely on speed, so speed denial is the key.</p>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li>• Slow them with defensive cards and stun effects</li>
+                        <li>• Take the first trade: removing one link breaks the chain</li>
+                        <li>• Keep a heal ready, since burst damage lands before you can react</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reading Opponent -->
+    <section class="py-12 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Reading Your Opponent</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Card Advantage Tells</h3>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li>• <strong class="text-white">Early turn 1 pass:</strong> a hand of only expensive cards, usually a ramp shell</li>
+                        <li>• <strong class="text-white">They keep playing cards after a heavy trade:</strong> they have more answers than you assumed</li>
+                        <li>• <strong class="text-white">Fast Wind turn 1:</strong> expect a tempo deck, not a control deck</li>
+                    </ul>
+                </div>
+                <div class="magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-xl font-bold mb-3 text-gold">Cooldown and Commitment Tells</h3>
+                    <ul class="space-y-2 text-white/80 text-sm">
+                        <li>• <strong class="text-white">A heavy card at turn 3:</strong> their finisher is already in hand and they are ahead of schedule</li>
+                        <li>• <strong class="text-white">No cards played for a full turn:</strong> they are holding a burst, usually an Inferno Dragon swing</li>
+                        <li>• <strong class="text-white">Repeated small blocks:</strong> they are protecting a single large threat, so look for it</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mistake Analysis -->
+    <section class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Mistake Analysis</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full magical-border rounded-xl overflow-hidden">
+                    <thead class="bg-deep-purple">
+                        <tr>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Mistake</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Why It Loses Games</th>
+                            <th class="px-6 py-4 text-left font-cinzel text-gold">Fix</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/10">
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4 font-semibold">Playing your biggest card turn 2</td>
+                            <td class="px-6 py-4 text-white/70">It leaves you with no answer and no card advantage</td>
+                            <td class="px-6 py-4 text-white/70">Hold it for turn 4-5 and keep a body in reserve</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4 font-semibold">Over-blocking a small threat</td>
+                            <td class="px-6 py-4 text-white/70">You spend two cards to kill one and fall behind on cards</td>
+                            <td class="px-6 py-4 text-white/70">Let cheap bodies trade, block the 2400+ threats</td>
+                        </tr>
+                        <tr class="bg-royal-purple/20">
+                            <td class="px-6 py-4 font-semibold">Playing around one element only</td>
+                            <td class="px-6 py-4 text-white/70">Arcane opponents like the Arcane Sentinel switch elements each turn</td>
+                            <td class="px-6 py-4 text-white/70">Keep one off-element answer in every deck</td>
+                        </tr>
+                        <tr class="bg-deep-purple/30">
+                            <td class="px-6 py-4 font-semibold">Chasing a bad trade</td>
+                            <td class="px-6 py-4 text-white/70">You are three cards down to win one race you did not need</td>
+                            <td class="px-6 py-4 text-white/70">Compare board totals, not individual card values</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Drills -->
+    <section class="py-12 px-4 bg-deep-purple/30">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="font-cinzel text-3xl font-bold mb-8 text-gold">Practice Drills</h2>
+            <p class="text-white/80 mb-6 max-w-3xl">Ranked games are expensive ways to learn. Run these short drills in practice mode instead, and track the result in a note on your phone.</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="tip-item magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Ten-Hand Drill</h3>
+                    <p class="text-white/70 text-sm">Open ten practice games and only play cards in the chain order above. Do not win the game. Win the order.</p>
+                </div>
+                <div class="tip-item magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">One-Card Hand Drill</h3>
+                    <p class="text-white/70 text-sm">Play ten games holding exactly one card in hand at all times. If you cannot win, you win because you never empty your hand.</p>
+                </div>
+                <div class="tip-item magical-border rounded-xl p-6 bg-deep-purple/50">
+                    <h3 class="font-cinzel text-lg font-bold mb-3 text-gold">Guess-the-Element Drill</h3>
+                    <p class="text-white/70 text-sm">Before each match, write down the opponent's element. Review after: three correct guesses in a row means you are reading boards, not just hands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adsterra Ads -->
+    <script async="async" data-cfasync="false" src="https://bauval.org/21/68fe8de0f9e903ae99f5758760ec42ac"></script>
+    <div id="container-68fe8de0f9e903ae99f5758760ec42ac"></div>
+
+    <script data-cfasync="false" src="https://bauval.org/14/b7bf862a458c7d9251b8087d2bafabf1"></script>
+
+    <script>
+      atOptions = {
+        'key' : '1b4c42a9e5ee18745ffeea1b12389dfe',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script src="https://bauval.org/22/1b4c42a9e5ee18745ffeea1b12389dfe"></script>
+
+    <!-- Footer -->
+    <footer class="bg-deep-purple/80 border-t border-gold/20 py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="font-cinzel text-gold text-xl mb-2">The New Duelist Wiki</p>
+            <p class="text-white/60 text-sm mb-4">Fan-made wiki site. Not affiliated with the official game developers.</p>
+            <div class="flex justify-center gap-6 text-white/60 text-sm">
+                <a href="index.html" class="hover:text-gold transition-colors">Home</a>
+                <a href="cards.html" class="hover:text-gold transition-colors">Cards</a>
+                <a href="strategies.html" class="hover:text-gold transition-colors">Strategies</a>
+                <a href="walkthrough.html" class="hover:text-gold transition-colors">Walkthrough</a>
+                <a href="tips.html" class="hover:text-gold transition-colors">Tips</a>
+                <a href="beginner-guide.html" class="hover:text-gold transition-colors">Beginner Guide</a>
+            </div>
+        </div>
+
+    <!-- Related Articles -->
+    <section class="max-w-4xl mx-auto py-8 px-4 border-t border-amber-900">
+        <h3 class="text-xl font-bold mb-4 text-white">You Might Also Like</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+        <a href="index.html" class="block p-4 bg-amber-900/30 border-amber-900 rounded hover:bg-amber-800/30 transition">
+            <span class="font-semibold text-gray-300">→ The New Duelist - Fan Wiki</span>
+        </a>
+        <a href="cards.html" class="block p-4 bg-amber-900/30 border-amber-900 rounded hover:bg-amber-800/30 transition">
+            <span class="font-semibold text-gray-300">→ Cards - The New Duelist Wiki</span>
+        </a>
+        <a href="strategies.html" class="block p-4 bg-amber-900/30 border-amber-900 rounded hover:bg-amber-800/30 transition">
+            <span class="font-semibold text-gray-300">→ Strategies - The New Duelist Wiki</span>
+        </a>
+        </div>
+    </section>
+</footer>
+</body>
+</html>
